@@ -1,0 +1,23 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Vercel CLI
+      run: npm install -g vercel
+
+    - name: Vercel Login
+      run: vercel login -t 2UyGYy7nvrLdGtl4YzQegPaU  # Set VERCEL_TOKEN as a secret in your GitHub repository settings
+
+    - name: Deploy to Vercel
+      run: vercel --prod --confirm --token 2UyGYy7nvrLdGtl4YzQegPaU
