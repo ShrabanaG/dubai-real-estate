@@ -25,6 +25,11 @@ You can explore the live demo of the project [here](https://dubai-real-estate-ei
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **Vercel**: Hosting platform for deploying the application.
 
+## Code Quality and Styling
+
+- **ESLint**: For identifying and fixing linting issues, ensuring code has best practices.
+- **Prettier**: For consistent styling
+
 ## Getting Started
 
 Follow these steps to get the project up and running on your local machine.
@@ -62,6 +67,7 @@ Ensure you have the following installed:
    pnpm dev # or
    bun dev
    Open http://localhost:3000 with your browser to see the result.
+   ```
 
 ### Project Structure
 
