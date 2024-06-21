@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.features {
+  margin-bottom: 2rem;
+}
+
+.features .features-content {
+  @apply flex justify-between items-center text-featureColor flex-wrap;
+}
+
+.features .features-content .feature-each-content {
+  @apply flex justify-center items-center flex-col;
+  flex: 1 1 calc(25% - 10px);
+}
+
+@media screen and (max-width: 900px) {
+  .features .features-content .feature-each-content {
+    flex: 1 1 calc(50% - 10px);
+    @apply flex-nowrap;
+  }
+}

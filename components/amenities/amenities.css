@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.amenities {
+}
+
+.amenities .amenities-header {
+  @apply text-center font-amenitiesHeaderFont text-amenitiesColor tracking-wide text-[30px] uppercase;
+}
+
+.amenities .sub-header {
+  @apply font-amenitiesHeaderFont text-amenitiesColor text-[8px] text-center;
+}
+
+.amenities .features-header {
+  @apply font-oswald text-featureColor text-[34px] font-medium uppercase tracking-wide mt-6 text-center;
+}
+
+.amenities .amenities-content {
+  @apply font-poppins text-[1rem] font-[300px] text-center text-amenitiesContentColor;
+}
+
+.amenities .amenities-content-mobile-view {
+  @apply hidden;
+}
+
+.amenities .amenities-card-container {
+  @apply flex justify-between items-center text-center gap-4 flex-wrap;
+}
+
+.amenities .amenities-card-container .each-card {
+  @apply gap-2 shadow-sm flex flex-col items-center justify-center;
+}
+
+.amenities .amenities-footer {
+  @apply font-poppins text-[10px] text-amenitiesFooterColor font-extralight text-end pr-[28px];
+}
+
+@media screen and (max-width: 900px) {
+  .amenities .amenities-content {
+    @apply text-center text-[13px];
+  }
+
+  .amenities .amenities-card-container .each-card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .amenities .amenities-content {
+    @apply hidden;
+  }
+
+  .amenities .amenities-content-mobile-view {
+    @apply block text-[14px] font-poppins text-center text-amenitiesContentColor;
+  }
+
+  .amenities .amenities-card-container .each-card .card-header {
+    @apply text-[10px];
+  }
+
+  .amenities .amenities-footer {
+    @apply text-center text-[8px];
+  }
+}

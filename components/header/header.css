@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-logo-container {
+  @apply flex justify-between items-start;
+}
+
+.header-logo-container .header-btn {
+  @apply text-sm h-[48px] w-[170px] text-center font-bold text-primaryColor border-2 border-primaryColor rounded-lg p-3 uppercase;
+  transition: all 0.5s;
+}
+
+.header-logo-container .header-btn:hover {
+  box-shadow: inset 6em 0 0 0 rgb(23 171 255 / var(--tw-text-opacity)),
+    inset -6em 0 0 0 rgb(23 171 255 / var(--tw-text-opacity));
+  border-color: rgb(23 171 255 / var(--tw-text-opacity));
+  color: #fff;
+}
+
+.header-content {
+  @apply text-white flex justify-between items-end pt-10 font-bold;
+}
+
+.header-content .content1-header {
+  @apply text-4xl font-bold pb-4;
+}
+
+.header-content .content1-header span {
+  @apply text-primaryColor uppercase;
+}
+
+.header-content .content2 {
+  @apply p-6 border-b-borderColor border-b-[1px];
+}
+
+.header-content .content2 .content2-btn {
+  @apply text-[13px] h-[48px] w-[248px] text-center bg-primaryColor rounded-md p-4 font-poppins uppercase mt-4;
+}
+
+.header-content .content3 {
+  @apply text-headerContent3Color text-[13px] font-extralight font-poppins px-6 py-3 rounded-b-lg;
+}
+
+.header-content-mobile {
+  @apply hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 2s forwards;
+}
+
+.fade-in.delay-2s {
+  animation-delay: 0.5s; /* Start animation after 2 seconds */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  transform: translateX(-100%); /* Start hidden */
+  animation: slideIn 1s forwards;
+}
+
+.slide-in-delay {
+  animation-delay: 4s;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    @apply h-auto;
+  }
+
+  .header .header-logo-container .header-btn {
+    @apply hidden;
+  }
+
+  .header-content-mobile {
+    @apply block;
+  }
+
+  .header-content {
+    @apply flex flex-col justify-start items-start p-6;
+  }
+
+  .header-logo-container .header-btn {
+    @apply hidden;
+  }
+
+  .header .header-content .content2,
+  .header .header-content .content3 {
+    @apply bg-sub-header-content2-responsive rounded-[14px];
+  }
+}
