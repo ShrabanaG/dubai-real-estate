@@ -32,6 +32,7 @@
 
 .header-content .content2 {
   @apply p-6 border-b-borderColor border-b-[1px];
+  backdrop-filter: blur(10px);
 }
 
 .header-content .content2 .content2-btn {
@@ -40,6 +41,7 @@
 
 .header-content .content3 {
   @apply text-headerContent3Color text-[13px] font-extralight font-poppins px-6 py-3 rounded-b-lg;
+  backdrop-filter: blur(5px);
 }
 
 .header-content-mobile {
@@ -103,8 +105,7 @@
     @apply hidden;
   }
 
-  .header .header-content .content2,
-  .header .header-content .content3 {
-    @apply bg-sub-header-content2-responsive rounded-[14px];
+  .header-card {
+    @apply mt-[1rem];
   }
 }

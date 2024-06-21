@@ -33,15 +33,15 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div className="content2 bg-sub-header-content2 rounded-t-[14px]">
+                <div className="header-card">
+                    <div className="content2 bg-sub-header-content2-responsive rounded-t-[14px]">
                         <div className="header1 uppercase font-poppins text-[0.7rem] font-extralight tracking-wide">Pricing Starts From</div>
                         <div className="header1-stat font-bold font-oswald text-[48px]">$ 425,000</div>
                         <div className="sub-header1 text-[24px] font-oswald font-extralight">AED 1.3 Million</div>
                         <button className="content2-btn">Get a presentation</button>
                         <div className="border-borderColor border-[1px] divider-card" />
                     </div>
-                    <div className=" bg-sub-header-content2 rounded-[14px] content3">
+                    <div className=" bg-sub-header-content2-responsive rounded-b-[14px] content3">
                         Get an Expert’s Presentation of Real <br /> Estate in Dubai for Life and investment
                     </div>
                 </div>
