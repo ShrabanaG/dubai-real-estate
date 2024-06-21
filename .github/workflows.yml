@@ -1,0 +1,23 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Vercel CLI
+      run: npm install -g vercel
+
+    - name: Vercel Login
+      run: vercel login -t ${{ secrets.vercel_token }}
+
+    - name: Deploy to Vercel
+      run: vercel --prod --confirm --token ${{ secrets.vercel_token }}
